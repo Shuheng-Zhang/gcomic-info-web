@@ -1,59 +1,36 @@
-# GcomicInfoWeb
+# 更方便地创建 `ComicInfo.xml`
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
+漫画文件档案 `cbz` 或 `cbr` 在内容根目录下使用 `ComicInfo.xml` 文件来描述档案信息。
 
-## Development server
+这是一个用户友好的，更便捷的漫画信息文件编辑工具页面。
 
-To start a local development server, run:
+
+## 主要功能目标
+
+以下是主要功能列表：
+  + [ ] 支持主要信息标签：`<Title>`, `<Series>`, `<Number>`, `<Publisher>`, `<Editor>`, `<Penciller>`, `<CoverArtist>`, `<Summary>`, `<LanguageISO>`, `<Tags>`, `<AgeRating>` 及 `<Manga>`
+  + [ ] 支持 `系列(Series)` 复用，在该系列下的档案将复用 `<Series>`, `<Publisher>`, `<Editor>` 标签  
+  + [ ] 支持 `标签(Tag)` 自动分割并填充到 `<Tags>` 标签
+  + [ ] 默认为日漫风格，标签 `<Manga>` 预设为 ___YesAndRightToLeft___
+  + [ ] 默认为日语漫画，标签 `<LanguageISO>` 预设为 ___jpn___
+
+## 开发
+
+执行以下命令启动开发服务器:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+服务器启动后，使用浏览器访问 `http://localhost:4200/` 。项目会热重载任何变更的项目资源文件。
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 构建
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+执行以下命令以构建项目:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+此操作将编译项目，并将构建产物存放在 `dist/` 目录中。默认情况下，生产环境构建会对应用程序进行性能与速度优化。
